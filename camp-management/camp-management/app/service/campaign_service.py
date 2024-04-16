@@ -1,8 +1,10 @@
 from sqlalchemy.orm import Session
 from app.model.campaign import CampaignORM
+from app.util import add_campaign_to_meta
 
 
 def create_campaign(db: Session, campaign: CampaignORM):
+    add_campaign_to_meta.add_data_to_meta_account(campaign)
     db_campaign = CampaignORM(**campaign.dict())
     db.add(db_campaign)
     db.commit()
