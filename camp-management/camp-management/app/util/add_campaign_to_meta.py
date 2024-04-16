@@ -4,10 +4,10 @@ from app.model.campaign import CampaignORM
 
 
 def add_data_to_meta_account(campaign: CampaignORM):
-    url = "https://graph.facebook.com/v15.0/act_1378888112738553/campaigns"
+    url = "https://graph.facebook.com/v15.0/act_id/campaigns"
 
     payload = {
-        'access_token': 'EAAfKXwEvzoYBOwetMTotWGKbqA4vrOfGOKKtpBLw6IsMCKJQdyLMSxr3B3zZBuqCte5VaC39YSeOhgAZC2ulmcUB1yL8WUJZBAVTuYH8GEvPzYgGCt7gbanNnfQaTTKTQYVIdSm4y59kltHcXbUb3dqhHnfH6hZBjQYejECzLpa7h8bZB7pygSEnWPZAPLWL6utwZDZD',
+        'access_token': '',
         'name': campaign.name,
         'status': 'PAUSED',
         'objective': campaign.objective,
